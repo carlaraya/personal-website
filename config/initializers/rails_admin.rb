@@ -42,6 +42,13 @@ RailsAdmin.config do |config|
   config.model Post do
     field :title
     field :body, :ck_editor
+    field :published
+    field :published_date do
+      read_only true
+    end
+    field :updated_at do
+      read_only true
+    end
   end
 
   config.model Profile do

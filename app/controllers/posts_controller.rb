@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts_filtered = Post.where(published: true)
+    @posts = @posts_filtered.order(:published_date).reverse_order if @posts_filtered
   end
 
   # GET /posts/1
