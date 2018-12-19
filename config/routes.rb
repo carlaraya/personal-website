@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :blog, controller: 'posts'
   root 'welcome#index'
   get '/about', to: 'welcome#about'
-  get '/portfolio', to: 'welcome#about'
+  get '/portfolio', to: 'welcome#portfolio'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

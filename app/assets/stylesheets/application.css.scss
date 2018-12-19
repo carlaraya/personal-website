@@ -24,7 +24,6 @@ $font-family: $font-name, 'Helvetica Neue', Arial, Helvetica, sans-serif !defaul
 @import "semantic-ui/globals/reset";
 @import "semantic-ui/globals/site";
 */
-$emSize   : 16px;
 
 body {
     background-color: #f3f2d8;
@@ -39,31 +38,23 @@ body {
     box-shadow: none;
     padding: 2vh 0;
     background-color: #d2ff96;
+    .ui.item:active, .ui.item:focus {
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
 }
 
+.index-space {
+    padding-top: 50px;
+}
 
-.home-rectangle {
+.index-intro {
+    height:100%;
+    color: #232826;
     background-color: transparent;
-    min-height: 500px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    .grid {
-        width: 100%;
+    h1 {
     }
-    .home-intro {
-        height:100%;
-        color: #232826;
-        background-color: transparent;
-        h1 {
-        }
-        img {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    .home-intro.centered {
-        text-align: center;
+    img {
         margin-left: auto;
         margin-right: auto;
     }
@@ -81,8 +72,10 @@ body {
     }
 }
 
+// for the content
+
 h1 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 p {
