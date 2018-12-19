@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carl Araya</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="navbar" class="ui borderless stackable menu">
+      <div class="ui container">
+        <%= link_to "CARL ARAYA", root_path, class: "ui tiny header item" %>
+        <div class="right menu">
+          <%= link_to "Home", root_path, class: "ui item" + (current_page?(root_path) ? " active" : "") %>
+          <%= link_to "Portfolio", portfolio_path, class: "ui item" + (current_page?(portfolio_path) ? " active" : "") %>
+          <%= link_to "About", about_path, class: "ui item" + (current_page?(about_path) ? " active" : "") %>
+          <%= link_to "Blog", blog_path, class: "ui item" + (current_page?(blog_path) ? " active" : "") %>
+          <% if admin_signed_in? %>
+            <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "ui item" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="ui container">
+      <% if not current_page?(root_path) %>
+        <div class="space-after-menu"></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

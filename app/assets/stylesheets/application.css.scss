@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require semantic-ui
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*
+$import-google-fonts: true !default;
+$font-url: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext' !default;
+$font-name: 'Lato' !default;
+$font-family: $font-name, 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+@import "semantic-ui/globals/reset";
+@import "semantic-ui/globals/site";
+*/
+$emSize   : 16px;
+
+body {
+    background-color: #f3f2d8;
+}
+
+.ui.container {
+    width: 720px;
+}
+
+#navbar {
+    border-bottom: 0 none !important;
+    box-shadow: none;
+    padding: 2vh 0;
+    background-color: #d2ff96;
+}
+
+
+.home-rectangle {
+    background-color: transparent;
+    min-height: 500px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .grid {
+        width: 100%;
+    }
+    .home-intro {
+        height:100%;
+        color: #232826;
+        background-color: transparent;
+        h1 {
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .home-intro.centered {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (min-width:768px) {
+    #navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .space-after-menu {
+        padding-top: 70px;
+    }
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 20px;
+}
